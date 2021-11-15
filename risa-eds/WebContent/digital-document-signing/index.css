@@ -1,0 +1,280 @@
+button:hover {
+	cursor: pointer;
+}
+
+.d-none {
+	display: none !important;
+}
+
+.container {
+	width: 60vw;
+	margin: 4vh auto;
+	border: 1px solid #999;
+}
+
+.header {
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: 10px;
+	line-height: 50px;
+	height: 50px;
+	background-color: #bbb;
+	color: #444;
+	font-weight: bold;
+	font-size: 15px;
+	border-bottom: 3px solid #999;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 25px solid white;
+	margin: 0 auto;
+	margin-top: -15px;
+}
+
+.content {
+	padding: 0 20px;
+	padding-bottom: 17px;
+}
+
+.notification {
+	margin-bottom: 20px;
+}
+
+.notification .icon-exclam {
+	display: inline-block;
+	text-align: center;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	font-size: 13px;
+	color: orange;
+	font-weight: bold;
+	border: 2px solid orange;
+	border-radius: 50%;
+}
+
+.notification .text {
+	color: red;
+	letter-spacing: -0.7px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.notification a {
+	color: black;
+	font-size: 15px;
+	margin-left: 8px;
+}
+
+.row {
+	display: flex;
+}
+
+.row .label {
+	flex: 1;
+	font-size: 15px;
+	font-weight: bold;
+	color: #222222;
+}
+
+.row .contents {
+	flex: 5;
+}
+
+.row .contents label {
+	display: block;
+	font-size: 14px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.signer-name label{
+	display: inline-block !important;
+}
+
+#document-type {
+	width: 500px;
+	height: 30px;
+}
+
+.position {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	padding-top: 25px;
+}
+
+.position .input-wrapper {
+	display: flex;
+	flex: 1;
+	min-width: 400px;
+	max-width: 400px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+
+.position .input-wrapper label {
+	box-sizing: border-box;
+	display: inline-block;
+	align-self: center;
+	flex: 1;
+}
+
+.position .input-wrapper input {
+	flex: 1;
+	box-sizing: border-box;
+	display: inline-block;
+	text-align: right;
+	height: 20px;
+}
+
+.drop-area {
+	padding-right: 20px;
+}
+
+#drop-area {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 100%;
+	height: 350px;
+	border: 3px dashed skyblue;
+}
+
+#drop-area:hover {
+	background: #dbf4ff;
+	cursor: pointer;
+}
+
+#drop-area .icon-plus {
+	display: flex;
+	box-sizing: border-box;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 9px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 35px;
+	font-weight: 600;
+	color: #444444;
+	border: 2px dashed #444444;
+	border-radius: 50%;
+}
+
+#drop-area .text {
+	width: 100%;
+	font-size: 15px;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: bold;
+	color: #444444;
+}
+
+.button-wrapper {
+	display: flex;
+	margin-top: 15px;
+}
+
+.button-wrapper button {
+	background: none;
+	border: none;
+	flex: 1;
+	height: 35px;
+	margin: 3px 0;
+	font-weight: bold;
+}
+
+
+.button-wrapper #choose-signature-image {
+	border: 1px solid orange;
+	color: orange;
+	margin-right: 10px;
+}
+
+.button-wrapper #sign-document {
+	background: linear-gradient(180deg, #5c80cb 0%, #3163bd 100%);
+	margin-left: 10px;
+	color: white;
+}
+
+.button-wrapper #sign-document:disabled {
+	background: lightgrey;
+}
+
+.load-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.loader,
+.loader:before,
+.loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: load7 1.8s infinite ease-in-out;
+    animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+    color: #ffffff;
+    font-size: 10px;
+    margin: 40vh auto;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+}
+.loader:before {
+    left: -3.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+.loader:after {
+    left: 3.5em;
+}
+@-webkit-keyframes load7 {
+	0%,
+	80%,
+	100% {
+	    box-shadow: 0 2.5em 0 -1.3em;
+	}
+	40% {
+	    box-shadow: 0 2.5em 0 0;
+	}
+}
+@keyframes load7 {
+	0%,
+	80%,
+	100% {
+	    box-shadow: 0 2.5em 0 -1.3em;
+	}
+	40% {
+	    box-shadow: 0 2.5em 0 0;
+	}
+}

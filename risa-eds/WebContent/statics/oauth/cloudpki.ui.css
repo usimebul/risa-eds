@@ -1,0 +1,494 @@
+
+#kicaCloudControlWrap div, #kicaCloudControlWrap span, #kicaCloudControlWrap applet, #kicaCloudControlWrap object, #kicaCloudControlWrap iframe,
+#kicaCloudControlWrap h1, #kicaCloudControlWrap h2, #kicaCloudControlWrap h3, #kicaCloudControlWrap h4, #kicaCloudControlWrap h5, #kicaCloudControlWrap h6, #kicaCloudControlWrap p, #kicaCloudControlWrap blockquote, #kicaCloudControlWrap pre,
+#kicaCloudControlWrap a, #kicaCloudControlWrap abbr, #kicaCloudControlWrap acronym, #kicaCloudControlWrap address, #kicaCloudControlWrap big, #kicaCloudControlWrap cite, #kicaCloudControlWrap code,
+#kicaCloudControlWrap del, #kicaCloudControlWrap dfn, #kicaCloudControlWrap em, #kicaCloudControlWrap img, #kicaCloudControlWrap ins, #kicaCloudControlWrap kbd, #kicaCloudControlWrap q, #kicaCloudControlWrap s, #kicaCloudControlWrap samp,
+#kicaCloudControlWrap small, #kicaCloudControlWrap strike, #kicaCloudControlWrap strong, #kicaCloudControlWrap sub, #kicaCloudControlWrap sup, #kicaCloudControlWrap tt, #kicaCloudControlWrap var,
+#kicaCloudControlWrap b, #kicaCloudControlWrap u, #kicaCloudControlWrap i, #kicaCloudControlWrap center,
+#kicaCloudControlWrap dl, #kicaCloudControlWrap dt, #kicaCloudControlWrap dd, #kicaCloudControlWrap ol, #kicaCloudControlWrap ul, #kicaCloudControlWrap li,
+#kicaCloudControlWrap fieldset, #kicaCloudControlWrap form, #kicaCloudControlWrap label, #kicaCloudControlWrap legend,
+#kicaCloudControlWrap table, #kicaCloudControlWrap caption, #kicaCloudControlWrap tbody, #kicaCloudControlWrap tfoot, #kicaCloudControlWrap thead, #kicaCloudControlWrap tr, #kicaCloudControlWrap th, #kicaCloudControlWrap td,
+#kicaCloudControlWrap article, #kicaCloudControlWrap aside, #kicaCloudControlWrap canvas, #kicaCloudControlWrap details, #kicaCloudControlWrap embed,
+#kicaCloudControlWrap figure, #kicaCloudControlWrap figcaption, #kicaCloudControlWrap footer, #kicaCloudControlWrap header, #kicaCloudControlWrap hgroup,
+#kicaCloudControlWrap menu, #kicaCloudControlWrap nav, #kicaCloudControlWrap output, #kicaCloudControlWrap ruby, #kicaCloudControlWrap section, #kicaCloudControlWrap summary,
+#kicaCloudControlWrap time, #kicaCloudControlWrap mark, #kicaCloudControlWrap audio, #kicaCloudControlWrap video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+#kicaCloudControlWrap *,
+#kicaCloudControlWrap *:after,
+#kicaCloudControlWrap *:before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: Arial, sans-serif !important;
+}
+#kicaCloudControlWrap article, #kicaCloudControlWrap aside, #kicaCloudControlWrap details, #kicaCloudControlWrap figcaption, #kicaCloudControlWrap figure,
+#kicaCloudControlWrap footer, #kicaCloudControlWrap header, #kicaCloudControlWrap hgroup, #kicaCloudControlWrap menu, #kicaCloudControlWrap nav, #kicaCloudControlWrap section {
+  display: block;
+}
+#kicaCloudControlWrap ol, #kicaCloudControlWrap ul {
+  list-style: none;
+}
+#kicaCloudControlWrap blockquote, #kicaCloudControlWrap q {
+  quotes: none;
+}
+#kicaCloudControlWrap blockquote:before, #kicaCloudControlWrap blockquote:after,
+#kicaCloudControlWrap q:before, #kicaCloudControlWrap q:after {
+  content: "";
+  content: none;
+}
+#kicaCloudControlWrap table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#kicaCloudControlWrap {
+  font-size:12px;
+  display:none;
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 9997;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y:auto;
+  padding:20px;
+}
+#kicaCloudControlWrap > .cloudTableWrap {
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+  display:table;
+}
+#kicaCloudControlWrap > .cloudTableWrap .cloudTableTd {
+	display:table-cell;
+  vertical-align: middle;
+}
+
+#kicaCloudControlWrap #kicaCloudUiInner {
+  max-width: 580px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+  -o-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+  
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap > p.cloudDescription {
+	font-size:12px;
+	line-height:1.43em;
+	margin-bottom:25px;
+}
+#kicaCloudControlWrap #kicaCloudUiInner .titIcon:before {
+	display:inline-block;
+	width:6px;
+	height:6px;
+	background:#4e8cd9;
+	border-radius:50%;
+	margin-right:3px;
+	content:"";
+	vertical-align:middle;
+}
+#kicaCloudControlWrap #kicaCloudUiInner .titIcon span {display:inline-block;vertical-align:middle;}
+#kicaCloudControlWrap #kicaCloudUiInner h1#cloudTitle {
+  background: #4e8cd9;
+  padding:15px 20px;
+  font-weight:bold;
+  color: #fff;
+  font-size:12px;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap {
+	padding:20px;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap > p {
+	margin-bottom:5px;
+	font-weight:bold;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTableWrap {
+	height:180px;
+	background:#fff;
+	overflow-y:auto;
+	border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  border:1px solid #ccc;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable{
+	width:100%;
+	background:#fff;
+	table-layout:fixed;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable .ccName {
+	
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable .ccPolicy {
+	white-space:normal;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable .ccExpire {
+	width:90px;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable .ccAuthority {
+	width:90px;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable th {
+	font-weight:bold;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable th,
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable td {
+	padding:8px 5px;
+	font-size:11px;
+	border:1px solid #ccc;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable tr:first-child td,
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable tr:first-child th {
+	border-top:0;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable tr:last-child td,
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable tr:last-child th {
+	/* border-bottom:0; */
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable tr th:first-child,
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable tr td:first-child {
+	border-left:0;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable tr th:last-child,
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable tr td:last-child {
+	border-right:0;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable tbody tr {
+	cursor:pointer;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable tbody tr[data-revoked='Y']{
+	opacity:0.5;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable tbody tr:hover {
+	background:#f9f9f9;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable tbody tr.active {
+	background:#4e8cd9;
+	color:#fff;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable th {
+	text-align:center;
+	background:#ececec;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap #certificateTable td {
+	width:25%;
+	white-space:nowrap;
+	text-align:center;
+}
+#kicaCloudControlWrap #kicaCloudUiInner #cloudContentWrap .cloudPasswordAlert {
+	color:red;
+	font-size:11px;
+	margin-top:5px;
+	display:none;
+}
+#kicaCloudControlWrap #certificatenewIdnWrap {
+	display:none;
+}
+#kicaCloudControlWrap #certificatenewIdnWrap,
+#kicaCloudControlWrap #certificateDownloadTypeWrap {
+	margin-top:25px;
+}
+#kicaCloudControlWrap #certificatenewIdnWrap label,
+#kicaCloudControlWrap #certificateDownloadTypeWrap label {
+	display:block;
+	margin-bottom:5px;
+	font-weight:bold;	
+}
+#kicaCloudControlWrap #certificateDownloadTypeWrap select {
+	width:100%;
+	height:30px;
+	border:1px solid #dbdbdb;
+	padding:0 10px;
+	border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  -webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	-o-box-shadow:none;
+}
+#kicaCloudControlWrap #certificateDownloadTypeWrap .cloudRadioBtnWrap {
+	text-align:center;
+	margin-top:15px;
+}
+#kicaCloudControlWrap #certificateDownloadTypeWrap .cloudRadioBtnWrap a {
+	display:inline-block;
+	margin-left:20px;
+	cursor:pointer;
+}
+#kicaCloudControlWrap #certificateDownloadTypeWrap .cloudRadioBtnWrap a span,
+#kicaCloudControlWrap #certificateDownloadTypeWrap .cloudRadioBtnWrap a input {
+	display:inline-block;
+	vertical-align:middle;
+}
+#kicaCloudControlWrap #certificateDownloadTypeWrap .cloudRadioBtnWrap label:first-child {margin-left:0;}
+#kicaCloudControlWrap #certificatePasswordWrap,
+#kicaCloudControlWrap #certificatenewPasswordWrap {
+	margin-top:25px;
+}
+#kicaCloudControlWrap #certificatePasswordWrap label,
+#kicaCloudControlWrap #certificatenewPasswordWrap label {
+	display:block;
+	margin-bottom:5px;
+	font-weight:bold;
+	margin-top:10px;
+}
+#kicaCloudControlWrap #certificatenewIdnWrap input,
+#kicaCloudControlWrap #certificatePasswordWrap input,
+#kicaCloudControlWrap #certificatenewPasswordWrap input {
+	width:100%;
+	border:1px solid #dbdbdb;
+	height:30px;
+	padding:0 10px;
+	box-shadow:none;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	-o-box-shadow:none;
+	border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+#kicaCloudControlWrap #certificateButtonWrap {
+	margin-top:25px;
+	text-align:center;
+}
+#kicaCloudControlWrap #certificateButtonWrap button {
+	width:90px;
+	height:30px;
+	text-align:center;
+	cursor:pointer;
+	border:0;
+	box-shadow:none;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	-o-box-shadow:none;
+	display:inline-block;
+	
+}
+#kicaCloudControlWrap #certificateButtonWrap button#cloudui-confirm-btn {
+	background:#4e8cd9;
+	color:#fff;
+}
+#kicaCloudControlWrap #certificateButtonWrap button#cloudui-confirm-btn:hover {
+	background:#5d9eef;
+}
+#kicaCloudControlWrap #certificateButtonWrap button#cloudui-cancel-btn {
+	background:#fff;
+	border:1px solid #4e8cd9;
+	margin-left:10px;
+}
+#kicaCloudControlWrap #certificateButtonWrap button#cloudui-cancel-btn:hover {
+	background:#999;
+	border-color:#999;
+	color:#fff;
+}
+
+/*
+Kica dialog
+*/
+#kicaCloudDialogWrap {
+	font-size:12px;
+  display:none;
+  position: fixed;
+  z-index: 9998;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y:auto;
+  padding:20px;	
+  
+}
+#kicaCloudDialogWrap.dialog--hide {
+	transition-duration:0.25s;
+	-webkit-transition-duration:0.25s;
+	-moz-transition-duration:0.25s;
+	-o-transition-duration:0.25s;
+	-ms-transition-duration:0.25s;
+	transform:translateY(-30px);
+	-webkit-transform:translateY(-30px);
+	-moz-transform:translateY(-30px);
+	-o-transform:translateY(-30px);
+	-ms-transform:translateY(-30px);
+	opacity:0;
+}
+#kicaCloudDialogWrap,
+#kicaCloudDialogWrap * {
+	box-sizing:border-box;
+	font-family:"Arial",sans-serif;
+}
+#kicaCloudDialogWrap #kicaCloudDialogTable {
+	display:table;
+	width:100%;
+	height:100%;
+}
+#kicaCloudDialogWrap #kicaCloudDialogTable #kicaCloudDialogTableCell {
+	display:table-cell;
+	vertical-align:middle;
+} 
+#kicaCloudDialogWrap #kicaCloudDialog {
+	width:320px;
+	margin:0 auto;
+	background:#fff;
+	border-radius: 6px;
+  	-webkit-border-radius: 6px;
+  	-moz-border-radius: 6px;
+  	-o-border-radius: 6px;
+  	overflow: hidden;
+  	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+  	-webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+  	-moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+  	-o-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+}
+#kicaCloudDialogWrap #kicaCloudDialogHeader {
+	background:#4e8cd9;
+	color:#fff;
+	padding:10px 20px;
+	font-size:14px;
+	font-weight:bold;
+}
+#kicaCloudDialogWrap #kicaCloudDialogBody {
+	padding:20px;
+	font-size:14px;
+	text-align:center;
+	line-height:1.43em;
+}
+#kicaCloudDialogWrap #kicaCloudDialogFooter {
+	padding:0px 20px 20px;
+	text-align:center;
+}
+#kicaCloudDialogWrap #kicaCloudDialogFooter button {
+	width:90px;
+	height:36px;
+	text-align:center;
+	font-size:14px;
+	cursor:pointer;
+	border:0;
+	box-shadow:none;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	-o-box-shadow:none;
+	display:inline-block;
+	background:#4e8cd9;
+	color:#fff;
+}
+#kicaCloudDialogWrap #kicaCloudDialogFooter button:hover {
+	background:#5d9eef;	
+}
+#kicaCloudLoadingWrap {
+  display:none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y:auto;
+  background:rgba(0,0,0,0.2);	
+}
+#kicaCloudLoadingWrap #kicaCloudDialogLoadingTable {
+	display:table;
+	width:100%;
+	height:100%;
+}
+#kicaCloudLoadingWrap #kicaCloudDialogLoadingTableCell {
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+}
+#kicaCloudLoadingWrap .lds-spinner {
+  color: official;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+#kicaCloudLoadingWrap .lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+#kicaCloudLoadingWrap .lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: #fff;
+}
+#kicaCloudLoadingWrap .lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+#kicaCloudLoadingWrap .lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+#kicaCloudLoadingWrap .lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+#kicaCloudLoadingWrap .lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+#kicaCloudLoadingWrap .lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+#kicaCloudLoadingWrap .lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+#kicaCloudLoadingWrap .lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+#kicaCloudLoadingWrap .lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+#kicaCloudLoadingWrap .lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+#kicaCloudLoadingWrap .lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+#kicaCloudLoadingWrap .lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+#kicaCloudLoadingWrap .lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

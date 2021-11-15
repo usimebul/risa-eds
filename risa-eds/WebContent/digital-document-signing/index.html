@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description"
+	content="Rwanda Digital Document Signing Service" />
+
+
+<title>Rwanda Digital Document Signing Service</title>
+<link rel="stylesheet" type="text/css" href="index.css" />
+
+<script src="jquery-3.4.1.min.js" defer> </script>
+<!-- Cloud PKI Requirements -->
+<link href="/statics/oauth/cloudpki.ui.css" rel="stylesheet">
+<script src="/statics/oauth/cloudpki.api.js" defer></script>
+<script src="/statics/oauth/cloudpki.ui.js" defer></script>
+<!-- /Cloud PKI -->
+<script src="index.js" defer> </script>
+</head>
+
+<body>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+	<div class="container">
+		<div class="header">Rwanda (Digital Document Signing) Service</div>
+		<div class="triangle"></div>
+		<div class="content">
+			<div class="notification">
+				<span class="icon-exclam">!</span> <span class="text">Please
+					issue a certificate in Rwanda PKI System before use the service.</span> <a
+					href="#">Go to RA Website</a>
+			</div>
+
+			<div class="row">
+				<div class="label">STEP 1</div>
+				<div class="contents">
+					<div class="signer-name">
+						<label for="signerName">Name</label> <input type="text"
+							id="signerName" />
+					</div>
+					<label for="document-type">Select Signature Document Type</label> <select
+						id="document-type">
+						<option value="authorization" selected>Authorization
+							Letter</option>
+						<option value="confirmation">Confirmation Leter</option>
+						<option value="direct">Direct Input</option>
+					</select>
+
+					<div class="position d-none">
+						<div class="input-wrapper">
+							<label for="offsetX">OffsetX</label> <input tpye="text"
+								id="offsetX">
+						</div>
+
+						<div class="input-wrapper">
+							<label for="offsetY">OffsetY</label> <input tpye="text"
+								id="offsetY">
+						</div>
+
+						<div class="input-wrapper">
+							<label for="width">Width</label> <input tpye="text" id="width">
+						</div>
+						<div class="input-wrapper">
+							<label for="height">Height</label> <input tpye="text" id="height">
+						</div>
+
+						<div class="input-wrapper">
+							<label for="page">Page</label> <input tpye="text" id="page">
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+
+			<div class="row">
+				<div class="label">STEP 2</div>
+				<div class="contents">
+					<div class="drop-area">
+						<label for="drop-area">Digital Sign to PDF File</label>
+						<div id="drop-area">
+							<div class="no-file-wrapper">
+								<div class="icon-plus">+</div>
+								<div class="text">
+									Click to browse / Drag & Drop<br>PDF Document
+								</div>
+							</div>
+							<div class="file-wrapper d-none">
+								<div class="text"></div>
+							</div>
+						</div>
+						<div class="button-wrapper">
+							<button id="choose-signature-image">Choose Signature
+								Image</button>
+							<button id="sign-document">Sign Document</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form class="d-none" method="POST" enctype="multipart/form-data"
+		id="form-pdf-file">
+		<input id="pdf-file" name="files" type="file" accept=".pdf">
+	</form>
+
+
+	<form class="d-none" method="POST" enctype="multipart/form-data"
+		id="form-image-file">
+		<input id="image-file" name="files" type="file"
+			accept=".jpg, .jpeg, .png, .gif">
+	</form>
+	<div id="spinner" class="load-container d-none">
+		<div class="loader">Loading...</div>
+	</div>
+
+
+</body>
+
+</html>

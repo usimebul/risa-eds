@@ -1,0 +1,381 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RWANDA EDS Demo</title>
+
+<!-- UI Requirements -->
+<link href="./statics/vendor/bootstrap-4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="./statics/vendor/bootstrap-toggle/css/bootstrap-toggle.min.css" rel="stylesheet">
+<!-- /UI Requirements -->
+
+<!-- Cloud PKI Requirements -->
+<link href="./statics/oauth/cloudpki.ui.css" rel="stylesheet">
+<!-- /Cloud PKI -->
+</head>
+
+<style>
+label {
+	font-size: 80%;
+}
+</style>
+
+<body>
+	<div class="container" style="max-width: 1725px;">
+		<h2 class="mt-4">
+			<b>Rwanda EDS Sample</b>
+		</h2>
+		<hr>
+		<div class="form-group row">
+			<div class="col-sm row">
+				<h6 class="w-100" style="padding-left: 15px;">
+					<b>File Upload</b>
+				</h6>
+				<div class="col-sm-12">
+					<form class="w-100" method="POST" enctype="multipart/form-data"
+						id="form-pdf-file">
+						<div class="form-group row">
+							<label class="col-form-label col-sm-2">Orginal PDF file</label>
+							<div class="col-sm-6">
+								<div class="custom-file">
+									<input type="file" name="files" class="custom-file-input"
+										id="input-pdf-file"> <label class="custom-file-label"
+										for="input-pdf-file" id="label-pdf-file-name">Choose a File</label>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<input type="submit" class="btn btn-primary w-100"
+									value="Upload" id="pdf-file-submit" />
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="col-sm-12">
+					<form class="w-100" method="POST" enctype="multipart/form-data"
+						id="form-sign-img-file">
+						<div class="form-group row">
+							<label class="col-form-label col-sm-2">Signer's sign image</label>
+							<div class="col-sm-6">
+								<div class="custom-file">
+									<input type="file" name="files" class="custom-file-input"
+										id="input-sign-image-file"> <label class="custom-file-label"
+										for="input-sign-image-file" id="label-sign-image-fil-name">Choose a
+										File</label>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<input type="submit" class="btn btn-primary w-100"
+									value="Upload" id="sign-image-file-submit" />
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="col-sm-12">
+					<form class="w-100" method="POST" enctype="multipart/form-data"
+						id="form-tsa-img-file">
+						<div class="form-group row">
+							<label class="col-form-label col-sm-2">Organization image for Time Stamping</label>
+							<div class="col-sm-6">
+								<div class="custom-file">
+									<input type="file" name="files" class="custom-file-input"
+										id="input-tsa-img-file"> <label
+										class="custom-file-label" for="input-tsa-img-file"
+										id="label-tsa-img-file-name">Choose a File</label>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<input type="submit" class="btn btn-primary w-100"
+									value="Upload" id="tsa-img-file-submit" />
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<h6 class="w-100" style="padding-left: 15px;">
+					<b>Signature Attributes</b>
+				</h6>
+				<!-- File Path -->
+				<label for="input-pdf-name" class="col-form-label col-sm-2">Orginal PDF file location path</label>
+				<div class="col-sm-10 mb-2">
+					<input id="input-pdf-name" type="text" class="form-control"
+						value="">
+				</div>
+
+				<!-- Signature Image Path -->
+				<label for="input-sign-image-name" class="col-form-label col-sm-2">Signer's sign image location
+					path</label>
+				<div class="col-sm-10 mb-2">
+					<input id="input-sign-image-name" type="text" class="form-control"
+						value="">
+				</div>
+
+				<!-- Signature Image Path -->
+				<label for="input-tsa-image-name" class="col-form-label col-sm-2">Organization's sign image
+					location path</label>
+				<div class="col-sm-10 mb-2">
+					<input id="input-tsa-image-name" type="text" class="form-control"
+						value="">
+				</div>
+
+				<!-- Unified Doc ID -->
+				<label for="input-unified-doc-id" class="col-form-label col-sm-2">U-Doc
+					ID</label>
+				<div class="col-sm-10 mb-2">
+					<input id="input-unified-doc-id" type="text" class="form-control"
+						value="09876">
+				</div>
+
+				<!-- Doc ID -->
+				<label for="input-doc-id" class="col-form-label col-sm-2">Doc
+					ID</label>
+				<div class="col-sm-10 mb-2">
+					<input id="input-doc-id" type="text" class="form-control"
+						value="123456789123">
+				</div>
+
+				<!-- Signer ID -->
+				<label for="input-signer-id" class="col-form-label col-sm-2">Singer
+					ID</label>
+				<div class="col-sm-10 mb-2">
+					<input id="input-signer-id" type="text" class="form-control"
+						value="944">
+				</div>
+
+				<!-- Signer Name -->
+				<label for="input-signer-name" class="col-form-label col-sm-2">Signer
+					Name</label>
+				<div class="col-sm-10 mb-2">
+					<input id="input-signer-name" type="text" class="form-control"
+						value="Gil-dong Hong">
+				</div>
+
+				<!-- Signer Reason -->
+				<label for="input-reason" class="col-form-label col-sm-2">Reason</label>
+				<div class="col-sm-10 mb-2">
+					<input id="input-reason" type="text" class="form-control"
+						value="Agreed">
+				</div>
+
+				<!-- Signer Location IP -->
+				<label for="input-location-ip" class="col-form-label col-sm-2">IP</label>
+				<div class="col-sm-10 mb-2">
+					<input id="input-location-ip" type="text" class="form-control"
+						value="111.111.111.111">
+				</div>
+
+				<!-- Signer Contact Info -->
+				<label for="input-signer-email" class="col-form-label col-sm-2">Signer
+					Email</label>
+				<div class="col-sm-10 mb-2">
+					<input id="input-signer-email" type="text" class="form-control"
+						value="gildong@test.com">
+				</div>
+
+			</div>
+
+			<div class="col-sm">
+				<h6 class="w-100">
+					<b>Signature Widget Attributes</b>
+				</h6>
+
+				<div class="row">
+					<!-- Signature Field Name -->
+					<label for="input-signature-field-name"
+						class="col-form-label col-sm-2">Signature Field Name</label>
+					<div class="col-sm-10 mb-2">
+						<input id="input-signature-field-name" type="text"
+							class="form-control" value="">
+					</div>
+					<h6 class="w-100 text-warning text-right"
+						style="padding-right: 15px;">
+						<small>If you set the value, Signature Field Name, then
+							the other properties are ignored.</small>
+					</h6>
+
+					<!-- Signature Field Width -->
+					<label for="input-width" class="col-form-label col-sm-2">Width</label>
+					<div class="col-sm-4 mb-2">
+						<input id="input-width" type="number" class="form-control"
+							value="159">
+					</div>
+
+					<!-- Signature Field Width -->
+					<label for="input-offset-x" class="col-form-label col-sm-2">Offset
+						X</label>
+					<div class="col-sm-4 mb-2">
+						<input id="input-offset-x" type="number" class="form-control"
+							value="419">
+					</div>
+
+					<!-- Signature Field Width -->
+					<label for="input-height" class="col-form-label col-sm-2">Height</label>
+					<div class="col-sm-4 mb-2">
+						<input id="input-height" type="number" class="form-control"
+							value="70">
+					</div>
+
+					<!-- Signature Field Width -->
+					<label for="input-offset-y" class="col-form-label col-sm-2">Offset
+						Y</label>
+					<div class="col-sm-4 mb-2">
+						<input id="input-offset-y" type="number" class="form-control"
+							value="22">
+					</div>
+
+					<!-- Signature Field Page -->
+					<label for="input-page" class="col-form-label col-sm-2">Page</label>
+					<div class="col-sm-4 mb-2">
+						<input id="input-page" type="number" class="form-control"
+							value="1">
+					</div>
+
+					<div class="col-sm-6"></div>
+				</div>
+
+				<div class="row mt-2">
+					<div class="col-sm-4">
+						<input id="checkbox-signature-visible" type="checkbox" checked
+							data-toggle="toggle" data-on="Signature Visible On"
+							data-off="Signature Visible Off" data-offstyle="secondary"
+							data-width="100%">
+					</div>
+
+					<div class="col-sm-4">
+						<input id="checkbox-sign-date-visible" type="checkbox" checked
+							data-toggle="toggle" data-on="Sign Date Visible On"
+							data-off="Sign Date Visible Off" data-offstyle="secondary"
+							data-width="100%">
+					</div>
+
+					<div class="col-sm-4">
+						<input id="checkbox-reason-visible" type="checkbox" checked
+							data-toggle="toggle" data-on="Reason Visible On"
+							data-off="Reason Visible Off" data-offstyle="secondary"
+							data-width="100%">
+					</div>
+				</div>
+
+				<div class="row mt-2">
+					<div class="col-sm-4">
+						<input id="checkbox-signer-visible" type="checkbox" checked
+							data-toggle="toggle" data-on="Signer Visible On"
+							data-off="Signer Visible Off" data-offstyle="secondary"
+							data-width="100%">
+					</div>
+
+					<div class="col-sm-4">
+						<input id="checkbox-doc-id-visible" type="checkbox" checked
+							data-toggle="toggle" data-on="Doc ID Visible On"
+							data-off="Doc ID Visible On Off" data-offstyle="secondary"
+							data-width="100%">
+					</div>
+
+					<div class="col-sm-4">
+						<input id="checkbox-chain-validiation" type="checkbox" checked
+							data-toggle="toggle" data-on="Chain Validiation On"
+							data-off="Validiation Off" data-offstyle="secondary"
+							data-width="100%">
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-sm">
+				<h6 style="margin-bottom: 16px;">
+					<b>Make a Signed PDF on Local(on My Laptop using my
+					certificate in Cloud PKI)</b>
+				</h6>
+				<button id="btn-get-pdf-hash" class="btn btn-primary w-100"
+					onclick="getPDFHash();">Get PDF file hash</button>
+				<hr>
+
+				<div class="form-group row" style="padding: 0 15px;">
+					<!-- PDF Hash -->
+					<label for="text-pdf-hash" class="col-form-label col-sm-2">PDF
+						Hash</label>
+					<div class="col-sm-4 mb-2">
+						<input id="text-pdf-hash" type="text" class="form-control">
+					</div>
+
+					<!-- Signature Field Name -->
+					<label for="text-signature-field-name"
+						class="col-form-label col-sm-2">Signature Field Name</label>
+					<div class="col-sm-4 mb-2">
+						<input id="gend-signature-field-name" type="text"
+							class="form-control">
+					</div>
+
+				</div>
+				<div class="row">
+					<button id="btn-get-p7-detached-message"
+						class="btn btn-primary m-2 col-sm"
+						onclick="getP7DetachedMessageFromCloud();">Get P7
+						Detached Message</button>
+				</div>
+				<hr>
+				<div class="form-group row">
+					<div class="col-sm">
+						<label>P7 Detached Message(HEX)</label>
+						<textarea id="textarea-p7-detached-message" class="form-control"
+							rows="5"></textarea>
+					</div>
+					<div class="col-sm">
+						<label>Certificate(HEX)</label>
+						<textarea id="textarea-certificate" class="form-control" rows="5"></textarea>
+					</div>
+				</div>
+				<button id="btn-attach-p7-detached-message"
+					class="btn btn-primary w-100" onclick="attachP7DetachedMessage();">Attach
+					P7 Detached Message</button>
+				<button id="btn-attach-p7-detached-message"
+					class="btn btn-primary w-100" onclick="genSignedPDFbyCloudPKI();">genSignedPDFbyCloudPKI</button>
+			</div>
+			<div class="col-sm">
+				<h6>
+					<b>Make a Signed PDF on Server(on Server System using
+		server certificate)</b>
+				</h6>
+				<div class="row">
+					<button id="btn-sign" class="btn btn-primary m-2 col-sm"
+						onclick="sign();">Sign</button>
+						<button id="btn-sign" class="btn btn-primary m-2 col-sm"
+						onclick="signByThree();">SignByThree</button>
+					<button id="btn-timestamp" class="btn btn-primary m-2 col-sm"
+						onclick="timestamp();">Timestamp</button>
+				</div>
+				<hr>
+				<div class="row">
+					<button id="btn-sign" class="btn btn-primary m-2 col-sm"
+						onclick="makeEmptyField();">makeEmptyField</button>
+					<div class="col-sm"></div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-sm">
+						<h6>Generated Signature Field Name</h6>
+						<input id="text-signature-field-name-result" type="text"
+							class="form-control"></input>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- UI Requirements -->	
+	<script src='./statics/vendor/jquery-3.4.1/jquery.min.js'></script>
+	<script src="./statics/vendor/bootstrap-4.4.1/js/bootstrap.min.js"></script>
+	<script src="./statics/vendor/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
+	<!-- /UI Requirements -->
+	
+	<!-- Cloud PKI Requirements -->
+	<script src="./statics/oauth/cloudpki.api.js"></script>
+	<script src="./statics/oauth/cloudpki.ui.js"></script>
+	<!-- /Cloud PKI -->
+	
+	<!-- Demo Scripts -->
+	<script src="./statics/js/ui-events.js"></script>
+	<script src="./statics/js/demo-functions.js"></script>
+	<!-- /Demo Scripts -->
+</body>
+</html>
