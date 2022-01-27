@@ -3,6 +3,7 @@ config.setHost("https://uat-cloud.govca.rw/cloud-service");
 config.setClientId("local_eds_demo");
 config.setRedirectUri("http://localhost:9190/callback.html");
 config.setScope("read");
+alert();
 
 // get signature value in PDF from CloudPKI
 function getP7DetachedMessageFromCloud() {
